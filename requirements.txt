@@ -31,6 +31,7 @@ constructs=10.3.0=pypi_0
 coverage=7.2.2=py312h5eee18b_0
 expat=2.6.3=h6a678d5_0
 flask=3.0.3=py312h06a4308_0
+flask-cors=3.0.10=pyhd3eb1b0_0
 fontconfig=2.14.1=h55d465d_3
 freetype=2.12.1=h4a9f257_0
 freexl=2.0.0=hf309648_0
@@ -119,7 +120,7 @@ qhull=2020.2=hdb19cb5_2
 readline=8.2=h5eee18b_0
 requests=2.32.3=py312h06a4308_0
 setuptools=72.1.0=py312h06a4308_0
-six=1.16.0=pypi_0
+six=1.16.0=pyhd3eb1b0_1
 sqlite=3.45.3=h5eee18b_0
 tbb=2021.8.0=hdb19cb5_0
 tiledb=2.3.3=h77177df_3
