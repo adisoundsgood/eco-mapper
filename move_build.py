@@ -3,7 +3,7 @@ import shutil
 
 # Paths
 react_build_path = 'frontend/build'
-flask_static_path = 'backend/static'
+flask_static_path = 'backend/static/static/'
 flask_templates_path = 'backend/templates'
 
 # Create static and templates directories if they don't exist
