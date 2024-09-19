@@ -22,6 +22,15 @@ app.config['RESULT_FOLDER'] = RESULT_FOLDER
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+# Serve React App
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve(path):
+    if path != "" and os.path.exists(app.static_folder + '/' + path):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return render_template("index.html")
+
 @app.route('/results/<path:filename>')
 def serve_result(filename):
   return send_from_directory(app.config['RESULT_FOLDER'], filename)
@@ -66,14 +75,6 @@ def process_file():
       return jsonify({'error': 'File type not allowed'}), 400
   pass
 
-# Serve React App
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
-def serve(path):
-    if path != "" and os.path.exists(app.static_folder + '/' + path):
-        return send_from_directory(app.static_folder, path)
-    else:
-        return render_template("index.html")
 
 if __name__ == '__main__':
     app.run(use_reloader=True, port=5000, threaded=True)
