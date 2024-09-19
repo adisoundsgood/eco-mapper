@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify, send_from_directory, render_template
 from flask_cors import CORS
 import os
 from werkzeug.utils import secure_filename
@@ -6,7 +6,7 @@ import numpy as np
 from osgeo import gdal
 from processor import calculate_ndvi, calculate_slope_aspect, estimate_carbon_storage
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
 CORS(app) # enables CORS for all routes
 
 UPLOAD_FOLDER = 'uploads'
@@ -60,7 +60,17 @@ def process_file():
       else:
           result_url = f"/results/{os.path.basename(process_result)}"
           return jsonify({'result_url': result_url}), 200
-  return jsonify({'error': 'File type not allowed'}), 400
+      return jsonify({'error': 'File type not allowed'}), 400
+  pass
+
+# Serve React App
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve(path):
+    if path != "" and os.path.exists(app.static_folder + '/' + path):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return render_template("index.html")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(use_reloader=True, port=5000, threaded=True)

@@ -32,7 +32,7 @@ const EcoMapper = () => {
 
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/api/process', formData, {
+      const response = await axios.post('/api/process', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
