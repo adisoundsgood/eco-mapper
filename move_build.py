@@ -2,9 +2,9 @@ import os
 import shutil
 
 # Paths
-react_build_path = '../frontend/build'  # Adjust this path as needed
-flask_static_path = 'static'
-flask_templates_path = 'templates'
+react_build_path = 'frontend/build'
+flask_static_path = 'backend/static'
+flask_templates_path = 'backend/templates'
 
 # Create static and templates directories if they don't exist
 os.makedirs(flask_static_path, exist_ok=True)
