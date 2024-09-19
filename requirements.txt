@@ -15,6 +15,7 @@ constructs
 coverage==7.6.1
 Flask==3.0.3
 Flask-Cors==5.0.0
+libgdal
 GDAL
 importlib_resources==6.4.4
 iniconfig==2.0.0
