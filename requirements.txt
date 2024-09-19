@@ -1,13 +1,4 @@
 attrs==24.2.0
-aws-cdk-lib==2.158.0
-aws-cdk.asset-awscli-v1==2.2.202
-aws-cdk.asset-kubectl-v20==2.1.2
-aws-cdk.asset-node-proxy-agent-v6==2.1.0
-aws-cdk.aws-iam==1.204.0
-aws-cdk.cloud-assembly-schema==36.0.24
-aws-cdk.core==1.204.0
-aws-cdk.cx-api==1.204.0
-aws-cdk.region-info==1.204.0
 blinker==1.8.2
 cattrs==23.2.3
 click==8.1.7
