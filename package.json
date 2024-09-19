@@ -8,9 +8,6 @@
     "start": "cd backend && gunicorn app:app",
     "heroku-postbuild": "cd frontend && npm install && npm run build && cd .. && python move_build.py"
   },
-  "cacheDirectories": [
-    "frontend/node_modules"
-  ],
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
