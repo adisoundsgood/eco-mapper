@@ -1,0 +1,3 @@
+Requirement already satisfied: numpy in /home/aditya/opt/miniconda3/envs/awscdk/lib/python3.12/site-packages (2.1.1)
+Requirement already satisfied: wheel in /home/aditya/opt/miniconda3/envs/awscdk/lib/python3.12/site-packages (0.43.0)
+Requirement already satisfied: setuptools in /home/aditya/opt/miniconda3/envs/awscdk/lib/python3.12/site-packages (72.1.0)
