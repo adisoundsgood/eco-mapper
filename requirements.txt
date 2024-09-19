@@ -11,10 +11,11 @@ aws-cdk.region-info==1.204.0
 blinker==1.8.2
 cattrs==23.2.3
 click==8.1.7
-constructs==10.3.0
+constructs
 coverage==7.6.1
 Flask==3.0.3
 Flask-Cors==5.0.0
+GDAL
 importlib_resources==6.4.4
 iniconfig==2.0.0
 itsdangerous==2.2.0
