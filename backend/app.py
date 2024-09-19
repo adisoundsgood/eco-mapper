@@ -9,7 +9,7 @@ import numpy as np
 from osgeo import gdal
 from .processor import calculate_ndvi, calculate_slope_aspect, estimate_carbon_storage
 
-app = Flask(__name__, static_folder='static', template_folder='templates')
+app = Flask(__name__, static_folder='static', static_url_path='static/', template_folder='templates')
 CORS(app) # enables CORS for all routes
 
 UPLOAD_FOLDER = 'uploads'

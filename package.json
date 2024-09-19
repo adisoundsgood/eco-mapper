@@ -1,9 +1,16 @@
 {
-  "name": "eco-mapper",
+  "name": "ecomapper",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
+    "start": "cd backend && gunicorn app:app",
     "heroku-postbuild": "cd frontend && npm install && npm run build && cd .. && python move_build.py"
   },
+  "cacheDirectories": [
+    "frontend/node_modules"
+  ],
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
