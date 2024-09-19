@@ -1,39 +1,6 @@
 import numpy as np
 from osgeo import gdal
 
-# Here I'm just doubling the values, but in a real scenario,
-# I'd implement more complex ecosystem service calculations
-def process_geotiff(input_path, output_path):
-  # Open the input GeoTIFF
-  ds = gdal.Open(input_path)
-  if ds is None:
-      raise ValueError("Could not open the input file")
-
-  # Read the data into a numpy array
-  band = ds.GetRasterBand(1)
-  array = band.ReadAsArray()
-
-  # Process the data
-  processed_array = array * 2
-
-  # Create a new GeoTIFF file
-  driver = gdal.GetDriverByName("GTiff")
-  out_ds = driver.Create(output_path, ds.RasterXSize, ds.RasterYSize, 1, gdal.GDT_Float32)
-
-  # Write the processed data
-  out_band = out_ds.GetRasterBand(1)
-  out_band.WriteArray(processed_array)
-
-  # Copy the projection and geotransform information
-  out_ds.SetProjection(ds.GetProjection())
-  out_ds.SetGeoTransform(ds.GetGeoTransform())
-
-  # Close the datasets
-  ds = None
-  out_ds = None
-
-  return output_path
-
 # Analyze remote sensing measurements and asses whether target 
 # contains live green vegetation
 def calculate_ndvi(input_path, output_path):

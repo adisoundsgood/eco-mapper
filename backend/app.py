@@ -1,10 +1,13 @@
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from flask import Flask, request, jsonify, send_from_directory, render_template
 from flask_cors import CORS
-import os
 from werkzeug.utils import secure_filename
 import numpy as np
 from osgeo import gdal
-from processor import calculate_ndvi, calculate_slope_aspect, estimate_carbon_storage
+from .processor import calculate_ndvi, calculate_slope_aspect, estimate_carbon_storage
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 CORS(app) # enables CORS for all routes
