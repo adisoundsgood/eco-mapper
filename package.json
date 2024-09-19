@@ -5,7 +5,6 @@
     "node": "14.x"
   },
   "scripts": {
-    "start": "cd backend && gunicorn app:app",
     "heroku-postbuild": "cd frontend && npm install && npm run build && cd .. && python move_build.py"
   }
 }
