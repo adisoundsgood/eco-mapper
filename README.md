@@ -9,7 +9,7 @@ eco-mapper is a web-based geospatial analysis tool that processes and visualizes
 - Visualize results to aid in ecosystem service assessment and land management decisions
 
 ## Calculations Performed
-EcoMapper currently supports the following calculations:
+eco-mapper currently supports the following calculations:
 
 ### NDVI (Normalized Difference Vegetation Index)
 
