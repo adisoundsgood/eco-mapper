@@ -3,7 +3,7 @@ import shutil
 
 # Paths
 react_build_path = 'frontend/build'
-flask_static_path = 'backend/'  # Remove the extra 'static' at the end
+flask_static_path = 'backend/static'  # Remove the extra 'static' at the end
 flask_templates_path = 'backend/templates'
 
 def move_build_files():
