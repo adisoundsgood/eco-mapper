@@ -1,6 +1,6 @@
 # eco-mapper
 
-eco-mapper is a web-based geospatial analysis tool that processes and visualizes environmental data to support ecosystem service mapping and decision-making. The purpose of this project is to deepen my understanding of ecosystem srevice calculations and how geospatial analysis impacts environmental research and decision-making..
+eco-mapper is a web-based geospatial analysis tool that processes and visualizes environmental data to support ecosystem service mapping and decision-making. The purpose of this project is to deepen my understanding of ecosystem service calculations and how they impact environmental research and decision-making..
 
 ## Project Goals
 
